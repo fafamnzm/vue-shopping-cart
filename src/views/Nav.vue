@@ -25,7 +25,7 @@ export default class Nav extends Vue {
     },
     {
       text: "ProductList",
-      address: "/todo"
+      address: "/product-list"
     },
     {
       text: "CartList",

@@ -15,10 +15,10 @@ export default new Vuex.Store({
       state.todos = [...todos]
     },
     SET_TODOS(state, todos: Array<ProductModel>): void {
-      todos.map(todo => state.todos.push(todo))
+      todos.map(product => state.todos.push(product))
     },
-    ADD_TODO(state, todo: ProductModel): void {
-      state.todos = [todo, ...state.todos]
+    ADD_TODO(state, product: ProductModel): void {
+      state.todos = [product, ...state.todos]
     }
   },
   actions: {
@@ -26,10 +26,10 @@ export default new Vuex.Store({
       const response = await TodoService.getProducts()
       context.commit("FETCH_TODOS", response.data)
     },
-    async addTodo(context, todo: ProductModel) {
+    async addTodo(context, product: ProductModel) {
       return new Promise<void>((resolve, reject) => {
         try {
-          context.commit("ADD_TODO", todo)
+          context.commit("ADD_TODO", product)
           resolve()
         } catch (err) {
           reject(err)
@@ -46,11 +46,11 @@ export default new Vuex.Store({
       return todos
     },
     singleTodo: state => (id: number) => {
-      const todo = state.todos.find(todo => todo.id === id)
-      return todo
+      const product = state.todos.find(product => product.id === id)
+      return product
     },
     getChosenProducts(state): Array<ProductModel> {
-      const chosenOnes = state.todos.filter(todo => todo.selected)
+      const chosenOnes = state.todos.filter(product => product.selected)
       return chosenOnes
     }
   }

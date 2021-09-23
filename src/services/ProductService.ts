@@ -127,9 +127,4 @@ export default {
     }
     // return apiClient.get(`/todos`)
   }
-  //  // In case we want to do the pagination
-  //  // on the server side
-  // getProducts(limit: any) {
-  //   return apiClient.get(`/todos?_limit=${limit}`)
-  // }
 }
