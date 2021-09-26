@@ -73,10 +73,6 @@ export default class CartList extends Vue {
   get totalCount() {
     return this.chosenProducts.length
   }
-
-  GoToTheDevelopersPage() {
-    window.location.href = "https://www.faramarz-monazami.com/"
-  }
 }
 </script>
 

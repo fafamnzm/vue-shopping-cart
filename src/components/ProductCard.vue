@@ -34,10 +34,6 @@ import ProductModel from "../store/models/ProductModel"
 export default class ProductCard extends Vue {
   @Prop() private product!: ProductModel
   private cardHover = true
-
-  GoToTheDevelopersPage() {
-    window.location.href = "https://www.faramarz-monazami.com/"
-  }
 }
 </script>
 
