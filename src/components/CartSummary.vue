@@ -16,15 +16,11 @@
         class="flex flex-column  align-center justify-center "
       >
         <div class="inside-list mb-5 pb-5">
-          <v-img
-            alt="Fafa Image"
-            class="img-class mb-3"
-            contain
-            round
-            src="https://www.faramarz-monazami.com/wp-content/uploads/2019/05/cropped-Capture3-6.jpg"
-            transition="scale-transition"
-            height="100"
-          />
+          <v-list-item-avatar
+            class="my-auto"
+            size="100"
+            color="grey"
+          ></v-list-item-avatar>
           <p>slected Itmes: {{ chosenProductsCount }}</p>
           <p>total price:</p>
           <h1>

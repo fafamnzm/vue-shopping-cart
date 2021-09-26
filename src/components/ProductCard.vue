@@ -2,15 +2,11 @@
   <div>
     <v-card :hover="cardHover" outlined rounded>
       <v-card-title class="justify-center">
-        <v-img
-          alt="Fafa Image"
-          class="img-class"
-          contain
-          src="https://www.faramarz-monazami.com/wp-content/uploads/2019/05/cropped-Capture3-6.jpg"
-          transition="scale-transition"
-          height="100"
-          @click="GoToTheDevelopersPage"
-        />
+        <v-list-item-avatar
+          class="my-auto"
+          size="80"
+          color="grey"
+        ></v-list-item-avatar>
       </v-card-title>
       <v-card-text class="card-title justify-center">
         Product {{ product.id }}

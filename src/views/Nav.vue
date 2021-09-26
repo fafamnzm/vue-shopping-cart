@@ -3,7 +3,7 @@
     <router-link v-for="nav in navOptions" :key="nav.text" :to="nav.address">
       <v-btn text rounded
         >{{ nav.text }}
-        <p v-if="ChosenProductsLength > 0" class="UndoneTodo">
+        <p v-if="ChosenProductsLength > 0" class="UndoneProduct">
           {{ nav.text === "CartList" ? ChosenProductsLength : "" }}
         </p>
       </v-btn>
@@ -32,7 +32,7 @@ export default class Nav extends Vue {
       address: "/cart-list"
     }
   ]
-  private incompleteTodos: Array<ProductModel> = []
+  private incompleteProducts: Array<ProductModel> = []
 
   get ChosenProductsLength() {
     return store.getters.getChosenProducts?.length
@@ -41,7 +41,7 @@ export default class Nav extends Vue {
 </script>
 
 <style scoped>
-.UndoneTodo {
+.UndoneProduct {
   background-color: crimson;
 }
 </style>

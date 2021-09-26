@@ -1,35 +1,35 @@
 import Vue from "vue"
 import Vuex from "vuex"
-// import TodoService from "@/services/TodoService"
+// import ProductService from "@/services/ProductService"
 import ProductModel from "./models/ProductModel"
-import TodoService from "../services/ProductService"
+import ProductService from "../services/ProductService"
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    todos: Array<ProductModel>()
+    products: Array<ProductModel>()
   },
   mutations: {
-    FETCH_TODOS(state, todos: Array<ProductModel>) {
-      state.todos = [...todos]
+    FETCH_PRODUCTS(state, products: Array<ProductModel>) {
+      state.products = [...products]
     },
-    SET_TODOS(state, todos: Array<ProductModel>): void {
-      todos.map(product => state.todos.push(product))
+    SET_PRODUCTS(state, products: Array<ProductModel>): void {
+      products.map(product => state.products.push(product))
     },
-    ADD_TODO(state, product: ProductModel): void {
-      state.todos = [product, ...state.todos]
+    ADD_PRODUCTS(state, product: ProductModel): void {
+      state.products = [product, ...state.products]
     }
   },
   actions: {
-    async fetchTodos(context) {
-      const response = await TodoService.getProducts()
-      context.commit("FETCH_TODOS", response.data)
+    async fetchProduct(context) {
+      const response = await ProductService.getProducts()
+      context.commit("FETCH_PRODUCTS", response.data)
     },
-    async addTodo(context, product: ProductModel) {
+    async addProduct(context, product: ProductModel) {
       return new Promise<void>((resolve, reject) => {
         try {
-          context.commit("ADD_TODO", product)
+          context.commit("ADD_PRODUCTS", product)
           resolve()
         } catch (err) {
           reject(err)
@@ -38,19 +38,19 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    // TodoModule
+    // ProductModule
   },
   getters: {
     getProducts(state) {
-      const todos = state.todos
-      return todos
+      const products = state.products
+      return products
     },
-    singleTodo: state => (id: number) => {
-      const product = state.todos.find(product => product.id === id)
+    singleProduct: state => (id: number) => {
+      const product = state.products.find(product => product.id === id)
       return product
     },
     getChosenProducts(state): Array<ProductModel> {
-      const chosenOnes = state.todos.filter(product => product.selected)
+      const chosenOnes = state.products.filter(product => product.selected)
       return chosenOnes
     }
   }
