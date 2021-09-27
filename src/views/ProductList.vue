@@ -68,7 +68,7 @@ export default class ItemsList extends Vue {
 </script>
 
 <style scoped>
-.cart-summary {
-  background-color: #1976d2;
+.row {
+  margin: 0 20px;
 }
 </style>

@@ -31,29 +31,31 @@
       <br />
     </div>
     <v-divider></v-divider>
-    <div class="details-price d-flex flex-row">
-      <div class="px-2">
-        TOTAL PRICE
+    <div class="bottom-cart-list">
+      <div class="details-price d-flex flex-row">
+        <div class="px-2">
+          TOTAL PRICE
+        </div>
+        <div class="px-2">
+          ---------------------------------------------------
+        </div>
+        <div class="px-2">
+          {{ totalAmount }}
+        </div>
       </div>
-      <div class="px-2">
-        ---------------------------------------------------
+      <div class="details-price d-flex flex-row">
+        <div class="px-2">
+          TOTAL COUNT
+        </div>
+        <div class="px-2">
+          ----------------------------------------------------------
+        </div>
+        <div class="px-2">
+          {{ totalCount }}
+        </div>
       </div>
-      <div class="px-2">
-        {{ totalAmount }}
-      </div>
+      <div class="pay-btn"><v-btn block class="primary">Pay</v-btn></div>
     </div>
-    <div class="details-price d-flex flex-row">
-      <div class="px-2">
-        TOTAL COUNT
-      </div>
-      <div class="px-2">
-        ----------------------------------------------------------
-      </div>
-      <div class="px-2">
-        {{ totalCount }}
-      </div>
-    </div>
-    <div class="pay-btn"><v-btn block class="primary">Pay</v-btn></div>
   </div>
 </template>
 
@@ -77,6 +79,10 @@ export default class CartList extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.cart-list-main {
+  max-width: 600px;
+  margin: auto;
+}
 .card-wrapper {
   max-width: 500px;
   border-radius: 40px;
