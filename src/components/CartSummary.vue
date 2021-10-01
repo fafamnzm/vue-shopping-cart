@@ -17,9 +17,9 @@
       >
         <div class="inside-list mb-5 pb-5">
           <v-list-item-avatar
-            class="my-auto"
-            size="100"
-            color="grey"
+            class="my-auto mb-5"
+            size="144"
+            color="#638CDF"
           ></v-list-item-avatar>
           <p>slected Itmes: {{ chosenProductsCount }}</p>
           <p>total price:</p>

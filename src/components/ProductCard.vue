@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator"
-import ProductModel from "../store/models/ProductModel"
+import ProductModel from "@/store/models/ProductModel"
 
 @Component
 export default class ProductCard extends Vue {
@@ -41,11 +41,11 @@ export default class ProductCard extends Vue {
 
 <style lang="scss" scoped>
 .main-product-card {
-  height: 300px;
-  max-width: 250px;
-  border-radius: 20px;
+  height: 297px;
+  max-width: 228px;
+  border-radius: 24px;
   align-items: center;
-  border: solid 1px #1976d2;
+  border: solid 1px #6c9af6;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
@@ -53,7 +53,7 @@ export default class ProductCard extends Vue {
   padding: 20px 0 10px;
 }
 .product-name {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
 }
 .purchase-btn {

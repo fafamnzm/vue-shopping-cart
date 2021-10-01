@@ -1,6 +1,6 @@
 <template>
   <div class="cart-list-main">
-    <h1 class="mb-10">
+    <h1 class="cart-report my-10">
       Cart Report
     </h1>
     <div v-for="product in chosenProducts" :key="product.id">
@@ -28,7 +28,6 @@
           </v-btn>
         </div>
       </div>
-      <br />
     </div>
     <v-divider></v-divider>
     <div class="bottom-cart-list">
@@ -79,12 +78,15 @@ export default class CartList extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.cart-report {
+  font-size: 63px;
+}
 .cart-list-main {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
 }
 .card-wrapper {
-  max-width: 500px;
+  max-width: 637px;
   border-radius: 40px;
   justify-content: space-between;
   align-items: center;
@@ -95,15 +97,15 @@ export default class CartList extends Vue {
   padding: 0 80px 0 0;
 }
 .product-name {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
 }
 .cancel-button {
   padding-right: 8px;
 }
 .details-price {
-  padding: 20px 60px;
-  justify-content: center;
+  padding: 20px 10px;
+  justify-content: space-around;
 }
 .pay-btn {
   padding: 20px 50px;
